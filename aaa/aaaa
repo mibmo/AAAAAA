@@ -1,0 +1,16 @@
+// vim: set ft=rust:
+#![allow(non_snake_case)]
+
+/// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+fn main() {
+    tokio::runtime::Builder::new_current_thread()
+        .enable_all()
+        .build()
+        .unwrap()
+        .block_on(async { AAAAAAAAAAAA().await });
+}
+
+/// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+async fn AAAAAAAAAAAA() {
+    println!("AAAAAAAAAAA");
+}

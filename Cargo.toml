@@ -3,13 +3,13 @@ name = "AAAAAA"
 version = "0.1.0"
 edition = "2018"
 
+[[bin]]
+name = "AAAAA"
+path = "aaa/aaaa"
+
 [dependencies]
 tokio = { version = "1.13.0", default-features = false, features = ["macros", "rt"] }
 tracing = "0.1.26"
 tracing-subscriber = { version = "0.2.19", features = ["env-filter", "fmt", "ansi", "registry"] }
 serenity = "0.10.9"
 sled = "0.34.7"
-
-[[bin]]
-name = "AAAAA"
-path = "aaa/aaaa"

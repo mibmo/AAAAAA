@@ -1,8 +1,41 @@
 // vim: set ft=rust:
+//! ```
+//!           AAA
+//!          AAAAA
+//!         AAA AAA
+//!        AAA   AAA
+//!       AAA     AAA
+//!      AAAAAAAAAAAAA
+//!     AAA         AAA
+//!    AAA           AAA
+//!   AAA             AAA
+//!  AAA               AAA
+//! ```
+
 #![allow(non_snake_case)]
 
-/// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+use {
+    std::env::var as AAA,
+    unicode_segmentation::UnicodeSegmentation as AAAAAAAAAAAAAAAAAAAAAAAAAAAA,
+    unicode_categories::UnicodeCategories,
+    serenity::{
+        async_trait,
+        model::{
+            channel::Message as AAAAAAAAAAAA,
+            gateway::Ready as AAAAAAAAA,
+        },
+        client::{
+            EventHandler as AAAAAAAAAAAAAAAAAAA,
+            Context as AAAAAAAAAAA,
+            Client as AAAAA,
+        },
+        //prelude::*,
+    }
+};
+
+#[doc(hidden)]
 fn main() {
+    // aa 
     tokio::runtime::Builder::new_current_thread()
         .enable_all()
         .build()
@@ -10,7 +43,41 @@ fn main() {
         .block_on(async { AAAAAAAAAAAA().await });
 }
 
+/// AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+struct AAAAAAAAAA;
+
+#[async_trait]
+impl AAAAAAAAAAAAAAAAAAA for AAAAAAAAAA {
+    async fn ready(&self, _: AAAAAAAAAAA, _: AAAAAAAAA) {}
+
+    async fn message(&self, aaa: AAAAAAAAAAA, a: AAAAAAAAAAAA) {
+        let aaaa = AAA("AAAAAA_AA").unwrap().parse::<u64>().unwrap();
+        if a.channel_id != aaaa { return }
+
+        if !AAAAAAAAAAAAA(&a.content) {
+            if let Err(aa) = a.delete(aaa.http).await {
+                println!("AA! >:( {}", aa);
+            }
+        }
+    }
+}
+
+/// AAAA AA AAAAA AA AAAAA
+fn AAAAAAAAAAAAA(aaaaa: &str) -> bool {
+    aaaaa.graphemes(false)
+        .filter(|a| a.chars().all(|a| a.is_letter()) )
+        .filter(|a| a.chars().all(|a| a != 'a' && a != 'A') )
+        .count() == 0
+}
+
 /// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 async fn AAAAAAAAAAAA() {
-    println!("AAAAAAAAAAA");
+    let aaaaa = AAA("AAAAAAA_AAAAA").expect("AAAAAAAAAAAAA!!!!!");
+    let mut aaa = AAAAA::builder(&aaaaa).event_handler(AAAAAAAAAA).await.expect("AAAAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!");
+    // aaaaaa a aaaaa aaaaaa aa aa aaa.
+    AAA("AAAAAA_AA").expect("aa!").parse::<u64>().expect("aaaa.... :/");
+
+    if let Err(aa) = aaa.start().await {
+        println!("aaaaaaa! {}", aa);
+    }
 }

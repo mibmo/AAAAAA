@@ -51,7 +51,7 @@ impl AAAAAAAAAAAAAAAAAAA for AAAAAAAAAA {
     async fn ready(&self, _: AAAAAAAAAAA, _: AAAAAAAAA) {}
 
     async fn message(&self, aaa: AAAAAAAAAAA, a: AAAAAAAAAAAA) {
-        let aaaa = AAA("AAAAAA_AA").unwrap().parse::<u64>().unwrap();
+        let aaaa = AAA("AAAAAAA_AA").unwrap().parse::<u64>().unwrap();
         if a.channel_id != aaaa { return }
 
         if !AAAAAAAAAAAAA(&a.content) {
@@ -75,7 +75,7 @@ async fn AAAAAAAAAAAA() {
     let aaaaa = AAA("AAAAAAA_AAAAA").expect("AAAAAAAAAAAAA!!!!!");
     let mut aaa = AAAAA::builder(&aaaaa).event_handler(AAAAAAAAAA).await.expect("AAAAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!");
     // aaaaaa a aaaaa aaaaaa aa aa aaa.
-    AAA("AAAAAA_AA").expect("aa!").parse::<u64>().expect("aaaa.... :/");
+    AAA("AAAAAAA_AA").expect("aa!").parse::<u64>().expect("aaaa.... :/");
 
     if let Err(aa) = aaa.start().await {
         println!("aaaaaaa! {}", aa);

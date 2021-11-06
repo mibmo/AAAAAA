@@ -61,7 +61,7 @@ impl AAAAAAAAAAAAAAAAAAA for AAAAAAAAAA {
         let aaaa = AAA("AAAAAAA_AA").unwrap().parse::<u64>().unwrap();
         if a.channel_id != aaaa { return }
 
-        if !AAAAAAAAAAAAA(&a.content) {
+        if !AAAAAAAAAAAAA(&a.content) || !a.attachments.is_empty() {
             if let Err(aa) = a.delete(aaa.http).await {
                 println!("AA! >:( {}", aa);
             }

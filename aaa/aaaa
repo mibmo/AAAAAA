@@ -22,8 +22,12 @@ use {
         async_trait,
         model::{
             channel::Message as AAAAAAAAAAAA,
-            gateway::Ready as AAAAAAAAA,
+            gateway::{
+                Ready as AAAAAAAAA,
+                Activity as AAAAAAAA,
+            },
             event::MessageUpdateEvent as AAAAAAAAAAAAAAAAAA,
+            user::OnlineStatus as AAAAAAAAAAAAA,
         },
         client::{
             EventHandler as AAAAAAAAAAAAAAAAAAA,
@@ -49,7 +53,9 @@ struct AAAAAAAAAA;
 
 #[async_trait]
 impl AAAAAAAAAAAAAAAAAAA for AAAAAAAAAA {
-    async fn ready(&self, _: AAAAAAAAAAA, _: AAAAAAAAA) {}
+    async fn ready(&self, a: AAAAAAAAAAA, _: AAAAAAAAA) {
+        a.set_presence(Some(AAAAAAAA::competing("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), AAAAAAAAAAAAA::Online).await;
+    }
 
     async fn message(&self, aaa: AAAAAAAAAAA, a: AAAAAAAAAAAA) {
         let aaaa = AAA("AAAAAAA_AA").unwrap().parse::<u64>().unwrap();

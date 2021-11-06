@@ -23,6 +23,7 @@ use {
         model::{
             channel::Message as AAAAAAAAAAAA,
             gateway::Ready as AAAAAAAAA,
+            event::MessageUpdateEvent as AAAAAAAAAAAAAAAAAA,
         },
         client::{
             EventHandler as AAAAAAAAAAAAAAAAAAA,
@@ -57,6 +58,22 @@ impl AAAAAAAAAAAAAAAAAAA for AAAAAAAAAA {
         if !AAAAAAAAAAAAA(&a.content) {
             if let Err(aa) = a.delete(aaa.http).await {
                 println!("AA! >:( {}", aa);
+            }
+        }
+    }
+
+    async fn message_update(&self, aaa: AAAAAAAAAAA, a: AAAAAAAAAAAAAAAAAA) {
+        let aaaa = AAA("AAAAAAA_AA").unwrap().parse::<u64>().unwrap();
+        if a.channel_id != aaaa { return }
+
+        let aaaaaa_aaaaaa = match a.content {
+            Some(a) => !AAAAAAAAAAAAA(&a),
+            None => true,
+        };
+
+        if aaaaaa_aaaaaa {
+            if let Err(_) = a.channel_id.delete_messages(aaa.http, [a.id]).await {
+                println!("AA! >:(");
             }
         }
     }

@@ -13,16 +13,9 @@ RUN adduser -Du 1000 -g ${PKG_NAME} ${PKG_NAME}
 RUN chown -R ${PKG_NAME}:${PKG_NAME} /build
 USER ${PKG_NAME}
 
-# build dependencies
-RUN cargo init --name $PKG_NAME
-ADD --chown=${PKG_NAME}:${PKG_NAME} Cargo.toml Cargo.lock ./
-RUN mv src/main.rs src/aaaa && mv src aaa
-RUN CXX=g++ cargo build --release
-
 # build binary
-ADD --chown=${PKG_NAME}:${PKG_NAME} aaa ./aaa
-RUN touch aaa/*.rs # make cargo think files have been modified
-RUN cargo build --release
+ADD --chown=${PKG_NAME}:${PKG_NAME} . .
+RUN CXX=g++ cargo build --release
 
 FROM scratch
 ARG PKG_NAME
